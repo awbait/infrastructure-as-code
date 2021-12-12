@@ -10,4 +10,4 @@
         extra_opts:
           - "--strip=1"
           - "--wildcards"
-          - '*/helm'
+          - "*/helm"

@@ -5,7 +5,7 @@
     - name: Create repository file for K8S
       blockinfile:
         create: true
-        mode: '644'
+        mode: "644"
         path: /etc/yum.repos.d/kubernetes.repo
         block: |
           [kubernetes]
@@ -30,7 +30,7 @@
     - name: Docker change cgroupdriver settings
       blockinfile:
         create: true
-        mode: '644'
+        mode: "644"
         path: /etc/docker/daemon.json
         marker: ""
         block: |
