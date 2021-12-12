@@ -1,0 +1,13 @@
+- name: Install helm
+  hosts: all
+
+  tasks:
+    - name: Install helm
+      unarchive:
+        src: https://get.helm.sh/helm-v3.7.2-linux-amd64.tar.gz
+        dest: /usr/local/bin
+        remote_src: true
+        extra_opts:
+          - "--strip=1"
+          - "--wildcards"
+          - '*/helm'

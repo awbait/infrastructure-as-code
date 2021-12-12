@@ -1,0 +1,55 @@
+- name: Install docker
+  hosts: all
+
+  tasks:
+    - name: Create repository file for K8S
+      blockinfile:
+        create: true
+        mode: '644'
+        path: /etc/yum.repos.d/kubernetes.repo
+        block: |
+          [kubernetes]
+          name=Kubernetes
+          baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-$basearch
+          enabled=1
+          gpgcheck=1
+          repo_gpgcheck=1
+          gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+          exclude=kubelet kubeadm kubectl
+    - name: Disable SWAP
+      shell:
+        cmd: |
+          swapoff -a
+      args:
+        executable: /bin/bash
+    - name: Remove Swap from fstab
+      mount:
+        name: swap
+        fstype: swap
+        state: absent
+    - name: Docker change cgroupdriver settings
+      blockinfile:
+        create: true
+        mode: '644'
+        path: /etc/docker/daemon.json
+        marker: ""
+        block: |
+          {
+            "exec-opts": ["native.cgroupdriver=systemd"]
+          }
+    - name: Restart docker service
+      service:
+        name: docker
+        state: restarted
+    - name: Install k8s tools
+      dnf:
+        name:
+          - kubelet
+          - kubeadm
+          - kubectl
+        state: latest
+        disable_excludes: kubernetes
+    - name: Start and enabled kubelet service
+      service:
+        name: kubelet
+        enabled: true
