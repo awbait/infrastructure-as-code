@@ -1,2 +1,3 @@
 # Ignore all in confiug folder
-temp_vars
+ansible/temp_vars/*/**
+!ansible/temp_vars/*/*.example
