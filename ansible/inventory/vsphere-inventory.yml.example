@@ -1,0 +1,8 @@
+---
+plugin: vmware_vm_inventory
+strict: False
+hostname: vcenter.srv.local
+username: admin
+password: password
+validate_certs: False
+with_tags: True
