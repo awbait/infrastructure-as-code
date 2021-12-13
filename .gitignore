@@ -1,4 +1,4 @@
-# Ignore all in confiug folder
+# Follow example files only START
 ansible/temp_vars/*/**
 !ansible/temp_vars/*/*.example
 
@@ -7,3 +7,4 @@ ansible/credentials_vars/*/**
 
 ansible/inventory/**
 !ansible/inventory/*.example
+# Follow example files only END
