@@ -2,8 +2,8 @@
 - name: Create VM from template
   hosts: localhost
   vars_files:
-    - ../../group_vars/vcenter-credentials.yml
-    - ../../temp_vars/vsphere-create-vm-vars.yml
+    - ../../credentials_vars/vsphere/credentials.yml
+    - ../../temp_vars/vsphere/create-vm-vars.yml
 
   tasks:
     - name: Create VM from template

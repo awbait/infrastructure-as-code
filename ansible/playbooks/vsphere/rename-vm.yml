@@ -1,0 +1,31 @@
+---
+- name: Rename VM
+  hosts: localhost
+  vars_files:
+    - ../../credentials_vars/vsphere/credentials.yml
+    - ../../temp_vars/vsphere/rename-vm-vars.yml
+
+  tasks:
+    - name: Get VM uuid
+      vmware_guest_info:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: false
+        datacenter: "{{ vm_datacenter }}"
+        folder: "{{ vm_folder }}"
+        name: "{{ vm_hostname }}"
+      register: vm_facts
+
+    - name: Print VM info
+      debug:
+        var: vm_facts
+
+    - name: Rename VM
+      vmware_guest:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: false
+        uuid: "{{ vm_facts.instance.hw_product_uuid }}"
+        name: "{{ vm_hostname_new }}"

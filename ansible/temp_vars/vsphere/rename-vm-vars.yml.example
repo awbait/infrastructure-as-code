@@ -1,0 +1,4 @@
+vm_hostname: vm-name
+vm_hostname_new: vm-new-name
+vm_datacenter: DC
+vm_folder: /DC/folder
