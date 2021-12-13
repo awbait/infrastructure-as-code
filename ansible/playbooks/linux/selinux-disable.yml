@@ -1,0 +1,9 @@
+- name: Disable SElinux
+  hosts: all
+
+  tasks:
+    - name: Disabling SELinux state
+      selinux:
+        state: disabled
+    - name: Reboot
+      reboot:

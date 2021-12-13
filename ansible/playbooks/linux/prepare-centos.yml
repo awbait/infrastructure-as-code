@@ -1,0 +1,17 @@
+- name: Preparing system for use
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Upgrade all packages
+      yum:
+        name: "*"
+        state: latest
+    - name: Install a list of packages with a list variable
+      yum:
+        name: "{{ packages }}"
+      vars:
+        packages:
+          - vim
+          - wget
+          - net-tools
