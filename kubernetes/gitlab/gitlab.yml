@@ -1,0 +1,54 @@
+global:
+  hosts:
+    domain: example.com
+    https: true
+    externalIP: 192.168.1.100
+  ingress:
+    configureCertmanager: false
+    tls:
+      enabled: true
+  psql:
+    host: 192.168.1.101
+    username: gitlab
+    database: gitlab
+    password:
+      useSecret: true
+      secret: gitlab-postgres-password
+      key: gitlab-postgresql-password
+  appConfig:
+    ldap:
+      preventSignin: false
+      servers:
+        main:
+          label: 'LDAP'
+          host: 'example.com'
+          port: '3268'
+          uid: 'sAMAccountName'
+          bind_dn: 'cn=username,ou=SRV,dc=example,dc=com'
+          base: 'dc=example,dc=com'
+          password:
+            secret: gitlab-ldap-password
+            key: gitlab-ldap-password
+gitlab:
+  webservice:
+    ingress:
+      tls:
+        secretName: release-gitlab-tls
+registry:
+  ingress:
+    tls:
+      secretName: release-registry-tls
+minio:
+  ingress:
+    tls:
+      secretName: release-minio-tls
+redis:
+  install: true
+  containerSecurityContext:
+    runAsUser: 0
+certmanager:
+  install: false
+postgresql:
+  install: false
+gitlab-runner:
+  install: false
