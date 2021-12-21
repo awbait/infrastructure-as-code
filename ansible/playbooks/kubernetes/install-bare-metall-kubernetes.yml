@@ -1,4 +1,4 @@
-- name: Install docker
+- name: Install Bare-metal cluster
   hosts: all
 
   tasks:

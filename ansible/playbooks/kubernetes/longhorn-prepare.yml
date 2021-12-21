@@ -1,0 +1,8 @@
+- name: Install requrements for Longhorn
+  hosts: all
+
+  tasks:
+    - name: Install requrements
+      yum:
+        name: iscsi-initiator-utils
+        state: latest

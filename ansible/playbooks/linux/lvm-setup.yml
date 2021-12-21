@@ -1,0 +1,34 @@
+- name: LVM Setup
+  hosts: all
+  become: true
+  vars_files:
+    - ../../temp_vars/linux/lvm-setup-vars.yml
+
+  tasks:
+    - name: Create new partition
+      parted:
+        device: "{{ lvm_device }}"
+        number: 1
+        flags: ["lvm"]
+        state: present
+    - name: Create volume group
+      lvg:
+        vg: "{{ lvm_vg_name }}"
+        pvs: "{{ lvm_device }}1"
+    - name: Create logical volume
+      lvol:
+        vg: "{{ lvm_vg_name }}"
+        lv: "{{ lvm_lv_name }}"
+        shrink: false
+        size: "{{ lvm_lv_size }}"
+    - name: Create a xfs filesystem
+      filesystem:
+        fstype: xfs
+        dev: "/dev/{{ lvm_vg_name }}/{{ lvm_lv_name }}"
+    - name: Mount and bind a volume
+      mount:
+        path: "{{ lvm_path }}"
+        src: "/dev/{{ lvm_vg_name }}/{{ lvm_lv_name }}"
+        opts: rw
+        fstype: xfs
+        state: mounted
