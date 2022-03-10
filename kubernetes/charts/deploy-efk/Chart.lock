@@ -1,0 +1,12 @@
+dependencies:
+- name: elasticsearch
+  repository: https://helm.elastic.co
+  version: 7.16.3
+- name: kibana
+  repository: https://helm.elastic.co
+  version: 7.16.3
+- name: fluentd
+  repository: https://fluent.github.io/helm-charts
+  version: 0.3.5
+digest: sha256:5a8ce61b4d25736ccfa2324ea7da513130c40c6f37072bcaca2921d8dddf6736
+generated: "2022-03-10T15:27:37.065566024+03:00"

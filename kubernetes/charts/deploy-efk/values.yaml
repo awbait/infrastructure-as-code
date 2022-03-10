@@ -1,0 +1,167 @@
+elasticsearch:
+  credentials:
+    username: elastic
+    password: admin
+  certificates: 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
+  certificate_crt: MIIDUDCCAjigAwIBAgIVAN79h384UtfmnWeLwXOttpZ4JCsFMA0GCSqGSIb3DQEBCwUAMDQxMjAwBgNVBAMTKUVsYXN0aWMgQ2VydGlmaWNhdGUgVG9vbCBBdXRvZ2VuZXJhdGVkIENBMB4XDTIxMTIyMDIyMzE1M1oXDTI0MTIxOTIyMzE1M1owHzEdMBsGA1UEAxMUZWxhc3RpY3NlYXJjaC1tYXN0ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCSO/+Op25Ff1lZzjdwMTyuH7ryhihoGovt0YEkBC4B+HQVH2qv8lAQoulVwUs1BnnVh8Y0qoQ7v9Q/erCwlePUPojZD2JqTLeo9OweISAlHQEd5uFlN7MOB44d/njeyEKn/LEheWb1K0Gu4mpog/axCWschTOg6OQlWxDeUAdu8h5oXaPTsn8xKZlzaWG4/t4NWeqqZZ0qSN58nB5dAsAT5uLeek/0zAMU7Fk/SqlwCbH/RCkJjNAPOmw/KW84H1N9PeGK0VSc/1ZNTEbcn/q9G9foevDVwblAKyPMBLK6Ets/1LR7kz30O5bZC1om/tdwQWPTwNTDZgsc5AUD6QtzAgMBAAGjbjBsMB0GA1UdDgQWBBS+HlXvnMOMRPnDGkHC+PI1zpecmjAfBgNVHSMEGDAWgBQWNHUZ/J626WZOKW1NAbRVhSg2ZzAfBgNVHREEGDAWghRlbGFzdGljc2VhcmNoLW1hc3RlcjAJBgNVHRMEAjAAMA0GCSqGSIb3DQEBCwUAA4IBAQB0WZsWXVNigonkL9aWPNd67C7Nl8BBBkydbdiO27bCZCLmlyLFTXojXS4RJzYeRWaxFvSpXddhk5S0YNB8qS5PJYDSqnLtURqRaEnJXwqyHrnIUQm3j/ZGQAgO67R1jPHmo9ROCZQYXNZIqyq2Fe6gl9RFjTo1YFTHR6oW4VeH66Y+IVC/Iv7FRVcZEDp7bFHH/B0eGLNM6mIzLvL/Puu3RFGgcgBC0PpWA4PuKVVn8nBjeyT17fcTH/XFI71B72tDJ9vGcW72LrdaKsfVcrW5Cgir7jHb66WL0fq6KmaJitbKwajbVy90dSAbW5IZ1xus0W1oO85VaVh3GFZm+RRQ
+  certificate_pem: QmFnIEF0dHJpYnV0ZXMKICAgIGZyaWVuZGx5TmFtZTogZWxhc3RpY3NlYXJjaC1tYXN0ZXIKICAgIGxvY2FsS2V5SUQ6IDU0IDY5IDZEIDY1IDIwIDMxIDM2IDM0IDMwIDMwIDMzIDM5IDM1IDMxIDMzIDM0IDM2IDMyIApLZXkgQXR0cmlidXRlczogPE5vIEF0dHJpYnV0ZXM+Ci0tLS0tQkVHSU4gUFJJVkFURSBLRVktLS0tLQpNSUlFdkFJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLWXdnZ1NpQWdFQUFvSUJBUUNTTy8rT3AyNUZmMWxaCnpqZHdNVHl1SDdyeWhpaG9Hb3Z0MFlFa0JDNEIrSFFWSDJxdjhsQVFvdWxWd1VzMUJublZoOFkwcW9RN3Y5US8KZXJDd2xlUFVQb2paRDJKcVRMZW85T3dlSVNBbEhRRWQ1dUZsTjdNT0I0NGQvbmpleUVLbi9MRWhlV2IxSzBHdQo0bXBvZy9heENXc2NoVE9nNk9RbFd4RGVVQWR1OGg1b1hhUFRzbjh4S1psemFXRzQvdDROV2VxcVpaMHFTTjU4Cm5CNWRBc0FUNXVMZWVrLzB6QU1VN0ZrL1NxbHdDYkgvUkNrSmpOQVBPbXcvS1c4NEgxTjlQZUdLMFZTYy8xWk4KVEViY24vcTlHOWZvZXZEVndibEFLeVBNQkxLNkV0cy8xTFI3a3ozME81YlpDMW9tL3Rkd1FXUFR3TlREWmdzYwo1QVVENlF0ekFnTUJBQUVDZ2dFQUVBT2tDL0pJQURKZkRaZW91SStienBISS9sQTAwcG05b3pDalROZHNWbWpvCkJYd29TZFptY0R2M0E1NGtaMDByUUhnYSs1K0UxYW8vU3loYmV5c2ZCUnBJRUVWQUNOWVg4dGZIbDlFVzNSbWQKQ3JKREVydVR6MENDanNSVVprbFdDMkYvNEdPVUk5czEyVG9RWHh1OGcweTl2eVRUTDVieGpTbTQ0aSt2Y0xYRwp0YVZUd0lxRUkyWjVRNGROUXpKdmp5SzI0WDRKekVxZVcvUVNIdm9FUDg0UXdGL3RKN2oxd3Y2RFNPU1hwN0taCjZMMDN2NUpwRDdyWWZ0MEtENEF6Z0M5a242bHNGTFhyenhmMjcvVVVVdVpTa3FSZzUvc1lPQ3JldWNGcXR1WDcKZVk2S1U1bTFzenR3ZEhXQ3hPZHorLzEzYjc3UkQweG5DalowNHlvQjRRS0JnUURLSUpxV1hlT0dsaE1OSU15dAo0WXltUlc0Znc5Y3Z1WmVMd1NqdjFWYys2WEs2NmJuU05WTHhJbThLbGhWMnRKZkFNdGh3MWhEZEU5VDNaY29uCkY4RTluWHdGaU01czNPZ0RTeFZPWko1REJ2eWdRL0RFRkcwYmpIM3lQMCtLRWJkT3cvYm5rWU0ydFBMbHZobFIKZElVSzZaWFJYSWR6ZEtvMk9pVWlkaE0rY1FLQmdRQzVOYjlkU3hFZEltVjJCM2pUa2RSKy9oZmhKcWhIREUzSQpOUWdyckxuRHFQOTJGNXpOaEhpeU5rQng5WlNoVlQ0cW01N1JDTnA4aE1OTGU1MFpoZGFCY0lJRWorY3A0SHFjCkR5dTd6RGpJQTF2bzlRTUtDVFJkR0ZVcVFERUZzTGNRT2s0cDNTOURtaUVTL0duZ0Z5bXdjRGZQTkF5b1VraS8KN1FBeE9BU2lJd0tCZ0RMLzl3RnB2emIrTnVCaEhrUGhYVE8yNFFweXg2RHJHeW5RR3h3b29GTG5aR04xQmNYYwpYb2twUHd0VXd5V29lNEdyVXFGbDRldG1UWjMrdVBzVUsxWDRub3BtOG03VmJsVW1aTUhhOFhQSUY0WDRubzlhCitBeXpialBwZFpCSTJBK3ZzbVRMZW1nYlVBNVg0TnVFb3UwVjh3OVlZWFRvUXVwYjBYTFlpQktCQW9HQWFEZjAKWFB6MnZsd3lsNzRRb1l6MzlCWHJQZ2pRdkZvU0VzeTBzazdab1Y0aGtrUXJPZ0tISUZFaTVuMTRpMmc2T1NPawp0Siswd2tpNjFHalV1QjMxM0pTQXRTeDh1YlhWaUtlSXhuNWVuVDQybzluclFlUjRFTUsyZWJYeFgvQldzc3o4Cld0WloyRUtNeGZBL2E1ZmRINm1sM2ZTK0FxRjZ5blVFbksyVy9kMENnWUJrblgzMERzVy9TTW5PcHVLU3MxanoKN0ZhNzRuNEtMZndObE5za0lDbWd6d29OQVJCcUo0Q2R0NDEyUVBDeStoQ3pUc2kxTFpYU1FnMlhtYUJlbURJcgpVNit3NnovVkM4eXhwaytOWUMwOGxMVjZyM3lZWkZQNkplaW9qc3hYL0s1ZmJxSjF0dWh1Mzk2MEZTVGZodXRUCm1GWExBcG10ZEYxL0JlWmpkcHZkNFE9PQotLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tCkJhZyBBdHRyaWJ1dGVzCiAgICBmcmllbmRseU5hbWU6IGVsYXN0aWNzZWFyY2gtbWFzdGVyCiAgICBsb2NhbEtleUlEOiA1NCA2OSA2RCA2NSAyMCAzMSAzNiAzNCAzMCAzMCAzMyAzOSAzNSAzMSAzMyAzNCAzNiAzMiAKc3ViamVjdD1DTiA9IGVsYXN0aWNzZWFyY2gtbWFzdGVyCgppc3N1ZXI9Q04gPSBFbGFzdGljIENlcnRpZmljYXRlIFRvb2wgQXV0b2dlbmVyYXRlZCBDQQoKLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVRENDQWppZ0F3SUJBZ0lWQU43OWgzODRVdGZtbldlTHdYT3R0cFo0SkNzRk1BMEdDU3FHU0liM0RRRUIKQ3dVQU1EUXhNakF3QmdOVkJBTVRLVVZzWVhOMGFXTWdRMlZ5ZEdsbWFXTmhkR1VnVkc5dmJDQkJkWFJ2WjJWdQpaWEpoZEdWa0lFTkJNQjRYRFRJeE1USXlNREl5TXpFMU0xb1hEVEkwTVRJeE9USXlNekUxTTFvd0h6RWRNQnNHCkExVUVBeE1VWld4aGMzUnBZM05sWVhKamFDMXRZWE4wWlhJd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUIKRHdBd2dnRUtBb0lCQVFDU08vK09wMjVGZjFsWnpqZHdNVHl1SDdyeWhpaG9Hb3Z0MFlFa0JDNEIrSFFWSDJxdgo4bEFRb3VsVndVczFCbm5WaDhZMHFvUTd2OVEvZXJDd2xlUFVQb2paRDJKcVRMZW85T3dlSVNBbEhRRWQ1dUZsCk43TU9CNDRkL25qZXlFS24vTEVoZVdiMUswR3U0bXBvZy9heENXc2NoVE9nNk9RbFd4RGVVQWR1OGg1b1hhUFQKc244eEtabHphV0c0L3Q0TldlcXFaWjBxU041OG5CNWRBc0FUNXVMZWVrLzB6QU1VN0ZrL1NxbHdDYkgvUkNrSgpqTkFQT213L0tXODRIMU45UGVHSzBWU2MvMVpOVEViY24vcTlHOWZvZXZEVndibEFLeVBNQkxLNkV0cy8xTFI3Cmt6MzBPNWJaQzFvbS90ZHdRV1BUd05URFpnc2M1QVVENlF0ekFnTUJBQUdqYmpCc01CMEdBMVVkRGdRV0JCUysKSGxYdm5NT01SUG5ER2tIQytQSTF6cGVjbWpBZkJnTlZIU01FR0RBV2dCUVdOSFVaL0o2MjZXWk9LVzFOQWJSVgpoU2cyWnpBZkJnTlZIUkVFR0RBV2doUmxiR0Z6ZEdsamMyVmhjbU5vTFcxaGMzUmxjakFKQmdOVkhSTUVBakFBCk1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQjBXWnNXWFZOaWdvbmtMOWFXUE5kNjdDN05sOEJCQmt5ZGJkaU8KMjdiQ1pDTG1seUxGVFhvalhTNFJKelllUldheEZ2U3BYZGRoazVTMFlOQjhxUzVQSllEU3FuTHRVUnFSYUVuSgpYd3F5SHJuSVVRbTNqL1pHUUFnTzY3UjFqUEhtbzlST0NaUVlYTlpJcXlxMkZlNmdsOVJGalRvMVlGVEhSNm9XCjRWZUg2NlkrSVZDL0l2N0ZSVmNaRURwN2JGSEgvQjBlR0xOTTZtSXpMdkwvUHV1M1JGR2djZ0JDMFBwV0E0UHUKS1ZWbjhuQmpleVQxN2ZjVEgvWEZJNzFCNzJ0REo5dkdjVzcyTHJkYUtzZlZjclc1Q2dpcjdqSGI2NldMMGZxNgpLbWFKaXRiS3dhamJWeTkwZFNBYlc1SVoxeHVzMFcxb084NVZhVmgzR0ZabStSUlEKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQpCYWcgQXR0cmlidXRlcwogICAgZnJpZW5kbHlOYW1lOiBjYQogICAgMi4xNi44NDAuMS4xMTM4OTQuNzQ2ODc1LjEuMTogPFVuc3VwcG9ydGVkIHRhZyA2PgpzdWJqZWN0PUNOID0gRWxhc3RpYyBDZXJ0aWZpY2F0ZSBUb29sIEF1dG9nZW5lcmF0ZWQgQ0EKCmlzc3Vlcj1DTiA9IEVsYXN0aWMgQ2VydGlmaWNhdGUgVG9vbCBBdXRvZ2VuZXJhdGVkIENBCgotLS0tLUJFR0lOIENFUlRJRklDQVRFLS0tLS0KTUlJRFNqQ0NBaktnQXdJQkFnSVZBTUZ1RE9sVThSTHBqSjc1Z0dia2FLNDFxNlZiTUEwR0NTcUdTSWIzRFFFQgpDd1VBTURReE1qQXdCZ05WQkFNVEtVVnNZWE4wYVdNZ1EyVnlkR2xtYVdOaGRHVWdWRzl2YkNCQmRYUnZaMlZ1ClpYSmhkR1ZrSUVOQk1CNFhEVEl4TVRJeU1ESXlNekUxTVZvWERUSTBNVEl4T1RJeU16RTFNVm93TkRFeU1EQUcKQTFVRUF4TXBSV3hoYzNScFl5QkRaWEowYVdacFkyRjBaU0JVYjI5c0lFRjFkRzluWlc1bGNtRjBaV1FnUTBFdwpnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDMnl4K1V0dG9BR2IxYmRpaXh0VVNmCkd2ZjNWdk12Qk9VSkY5blBxK1IzaUF1czUxSVUrc05BQ1BDWlROYlJqdjRrQVZlaUpaOHZVTHZVeG80Znp3a2kKUE0rOWZ4cng3S1pWWVFrTE85VE5xVnRZRmt5dW0rb3pJNlhBZDJiYldxRGRIVVhWMkUrNVNGS045VDhFM1BjWQplVTVpaEpmNy9MUWtGeWhRNzZVSWprS2g3UUJPRmZFZDEzZ2JNc25HdEpRNHBVMVhFZXlIU3NDNlFRMmpPOGg1CkVqRklOSG5SNkVFcU5XV0szTnNWUm0yUmYybHZiVkVUclU0MkNGUWJwVitVb0dGMVRtWDZSandmUEVYZy84a3AKNC83Yk9XcnJJa1IxWTZneTAyRGUxWnJycGIrdkVaWUFTZmR6ZG9PdnhONitPQU9QYVVNU0w5VVI1c0FJSnF5QgpBZ01CQUFHalV6QlJNQjBHQTFVZERnUVdCQlFXTkhVWi9KNjI2V1pPS1cxTkFiUlZoU2cyWnpBZkJnTlZIU01FCkdEQVdnQlFXTkhVWi9KNjI2V1pPS1cxTkFiUlZoU2cyWnpBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQjI4WGVMNzhISDNNYnppa0I5cWZ5MkhZZ3VqS1REeTZHZWJ2SEtWY0VSMXZpTAo0SWFxbnBWWUg2cmV6VVB4b1lwVXJLMFo1V0RQdi8vVkVkUWtPOUtjdFEyWFJtNHFkSHdaUlgxbW10ZW94WkpZCjBIaTFQb2JlK0hNend2aitsWGNsMEw4Qy9sZG5nNUR5S25PanREZk9tUVlJTDFrdEQrdGgyZFFEajVlS3BQNUgKWit3MVJvRkdOK3p0cDNFQ3VQU21FWjZmOU0wQ1JEbVhyM3ZFM2ZrdWluQkU4SkY4NEIxb1lDSFBDb0RLc1BSRApFakl2M3ROQkJueXpzMHp5RmNOY1EzeFZKZ1dUeWMxOEdoU29iYyt0UFVhaGlPT0hteGUxNUphYUhZeUdkd2gyCk04SXNKekN0azA1bW9raUgweDVmVy9sUEdxOHFYZkhYQzVXWXpuVHkKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  replicas: 2
+  resources:
+    requests:
+      cpu: "2500m"
+      memory: "4Gi"
+    limits:
+      cpu: "2500m"
+      memory: "4Gi"
+  volumeClaimTemplate:
+    storageClassName: local-path
+    resources:
+      requests:
+        storage: 5Gi
+  extraEnvs:
+    - name: ELASTIC_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: elastic-credentials
+          key: password
+    - name: ELASTIC_USERNAME
+      valueFrom:
+        secretKeyRef:
+          name: elastic-credentials
+          key: username
+  # protocol: https
+  esConfig:
+    elasticsearch.yml: |
+      xpack.security.enabled: true
+      xpack.security.transport.ssl.enabled: true
+      xpack.security.transport.ssl.verification_mode: certificate
+      xpack.security.transport.ssl.keystore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+      xpack.security.transport.ssl.truststore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+#      xpack.security.http.ssl.enabled: true
+#      xpack.security.http.ssl.truststore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+#      xpack.security.http.ssl.keystore.path: /usr/share/elasticsearch/config/certs/elastic-certificates.p12
+#      xpack.security.authc.realms.native.local.order: 0
+  secretMounts:
+    - name: elastic-certificates
+      secretName: elastic-certificates
+      path: /usr/share/elasticsearch/config/certs
+
+kibana:
+  elasticsearchHosts: "http://elasticsearch-master:9200"
+  extraEnvs:
+    - name: "ELASTICSEARCH_USERNAME"
+      valueFrom:
+        secretKeyRef:
+          name: elastic-credentials
+          key: username
+    - name: "ELASTICSEARCH_PASSWORD"
+      valueFrom:
+        secretKeyRef:
+          name: elastic-credentials
+          key: password
+#     - name: "KIBANA_ENCRYPTION_KEY"
+#       valueFrom:
+#         secretKeyRef:
+#           name: kibana-secret
+#           key: encryptionkey
+  # protocol: https
+  # kibanaConfig:
+  #   kibana.yml: |
+  #     server.ssl:
+  #       enabled: true
+  #       key: /usr/share/kibana/config/certs/elastic-certificate.pem
+  #       certificate: /usr/share/kibana/config/certs/elastic-certificate.pem
+  #     xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
+  #     elasticsearch.ssl:
+  #       certificateAuthorities: /usr/share/kibana/config/certs/elastic-certificate.pem
+  #       verificationMode: certificate
+  # secretMounts:
+  #   - name: elastic-certificates
+  #     secretName: elastic-certificates
+  #     path: /usr/share/kibana/config/certs
+
+fluentd:
+  ## Fluentd configurations:
+  ##
+  fileConfigs:
+    01_sources.conf: |-
+      ## logs from podman
+      <source>
+        @type tail
+        @id in_tail_container_logs
+        @label @KUBERNETES
+        path /var/log/containers/*.log
+        pos_file /var/log/fluentd-containers.log.pos
+        tag kubernetes.*
+        read_from_head true
+        <parse>
+          @type multi_format
+          <pattern>
+            format json
+            time_key time
+            time_type string
+            time_format "%Y-%m-%dT%H:%M:%S.%NZ"
+            keep_time_key false
+          </pattern>
+          <pattern>
+            format regexp
+            expression /^(?<time>.+) (?<stream>stdout|stderr)( (.))? (?<log>.*)$/
+            time_format '%Y-%m-%dT%H:%M:%S.%NZ'
+            keep_time_key false
+          </pattern>
+        </parse>
+        emit_unmatched_lines true
+      </source>
+    02_filters.conf: |-
+      <label @KUBERNETES>
+        <match kubernetes.var.log.containers.fluentd**>
+          @type relabel
+          @label @FLUENT_LOG
+        </match>
+        # <match kubernetes.var.log.containers.**_kube-system_**>
+        #   @type null
+        #   @id ignore_kube_system_logs
+        # </match>
+        <filter kubernetes.**>
+          @type kubernetes_metadata
+          @id filter_kube_metadata
+          skip_labels false
+          skip_container_metadata false
+          skip_namespace_metadata true
+          skip_master_url true
+        </filter>
+        <match **>
+          @type relabel
+          @label @DISPATCH
+        </match>
+      </label>
+    03_dispatch.conf: |-
+      <label @DISPATCH>
+        <filter **>
+          @type prometheus
+          <metric>
+            name fluentd_input_status_num_records_total
+            type counter
+            desc The total number of incoming records
+            <labels>
+              tag ${tag}
+              hostname ${hostname}
+            </labels>
+          </metric>
+        </filter>
+        <match **>
+          @type relabel
+          @label @OUTPUT
+        </match>
+      </label>
+    04_outputs.conf: |-
+      <label @OUTPUT>
+        <match **>
+          @type elasticsearch
+          host "elasticsearch-master"
+          port 9200
+          path ""
+          user elastic
+          password admin
+        </match>
+      </label>
