@@ -48,6 +48,10 @@ elasticsearch:
 
 kibana:
   elasticsearchHosts: "http://elasticsearch-master:9200"
+  service:
+    type: "LoadBalancer"
+    annotations:
+      metallb.universe.tf/allow-shared-ip: "efk-services"
   extraEnvs:
     - name: "ELASTICSEARCH_USERNAME"
       valueFrom:
@@ -85,6 +89,8 @@ fluentd:
   ##
   service:
     type: "LoadBalancer"
+    annotations:
+      metallb.universe.tf/allow-shared-ip: "efk-services"
   ## Fluentd configurations:
   ##
   fileConfigs:
