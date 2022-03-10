@@ -81,6 +81,10 @@ kibana:
   #     path: /usr/share/kibana/config/certs
 
 fluentd:
+  ## Fluentd service
+  ##
+  service:
+    type: "LoadBalancer"
   ## Fluentd configurations:
   ##
   fileConfigs:
