@@ -8,11 +8,11 @@ elasticsearch:
   replicas: 2
   resources:
     requests:
-      cpu: "2500m"
-      memory: "4Gi"
+      cpu: "3000m"
+      memory: "6Gi"
     limits:
-      cpu: "2500m"
-      memory: "4Gi"
+      cpu: "3000m"
+      memory: "6Gi"
   volumeClaimTemplate:
     storageClassName: local-path
     resources:
@@ -91,36 +91,53 @@ fluentd:
     type: "LoadBalancer"
     annotations:
       metallb.universe.tf/allow-shared-ip: "efk-services"
+    ports:
+    - name: collectors
+      containerPort: 5140
+      protocol: TCP
   ## Fluentd configurations:
   ##
   fileConfigs:
     01_sources.conf: |-
       ## logs from podman
+      # <source>
+      #   @type tail
+      #   @id in_tail_container_logs
+      #   @label @KUBERNETES
+      #   path /var/log/containers/*.log
+      #   pos_file /var/log/fluentd-containers.log.pos
+      #   tag kubernetes.*
+      #   read_from_head true
+      #   <parse>
+      #     @type multi_format
+      #     <pattern>
+      #       format json
+      #       time_key time
+      #       time_type string
+      #       time_format "%Y-%m-%dT%H:%M:%S.%NZ"
+      #       keep_time_key false
+      #     </pattern>
+      #     <pattern>
+      #       format regexp
+      #       expression /^(?<time>.+) (?<stream>stdout|stderr)( (.))? (?<log>.*)$/
+      #       time_format '%Y-%m-%dT%H:%M:%S.%NZ'
+      #       keep_time_key false
+      #     </pattern>
+      #   </parse>
+      #   emit_unmatched_lines true
+      # </source>
+
+      ## logs from server
       <source>
-        @type tail
-        @id in_tail_container_logs
-        @label @KUBERNETES
-        path /var/log/containers/*.log
-        pos_file /var/log/fluentd-containers.log.pos
-        tag kubernetes.*
-        read_from_head true
+        @type tcp
+        @label @OUTPUT
+        tag nginx.access
         <parse>
-          @type multi_format
-          <pattern>
-            format json
-            time_key time
-            time_type string
-            time_format "%Y-%m-%dT%H:%M:%S.%NZ"
-            keep_time_key false
-          </pattern>
-          <pattern>
-            format regexp
-            expression /^(?<time>.+) (?<stream>stdout|stderr)( (.))? (?<log>.*)$/
-            time_format '%Y-%m-%dT%H:%M:%S.%NZ'
-            keep_time_key false
-          </pattern>
+          @type nginx
+          keep_time_key true
         </parse>
-        emit_unmatched_lines true
+        port 5140
+        bind 0.0.0.0
       </source>
     02_filters.conf: |-
       <label @KUBERNETES>
@@ -170,8 +187,9 @@ fluentd:
           @type elasticsearch
           host "elasticsearch-master"
           port 9200
+          logstash_format true
           path ""
           user elastic
-          password admin
+          password changeme
         </match>
       </label>
