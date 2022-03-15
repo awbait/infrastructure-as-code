@@ -1,0 +1,21 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: my-issuer
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: my-ca-cert
+spec:
+  commonName: dachub
+  isCA: true
+  issuerRef:
+    kind: Issuer
+    name: my-issuer
+  secretName: my-ca-cert
+  subject:
+    organizations:
+      - DAC

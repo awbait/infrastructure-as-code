@@ -9,4 +9,4 @@ dependencies:
   repository: https://fluent.github.io/helm-charts
   version: 0.3.5
 digest: sha256:0aebb6ea3829bc5047c630b0b454bd5cddbfc844086f544df2da303c7220888b
-generated: "2022-03-14T15:31:51.67353575+03:00"
+generated: "2022-03-15T21:28:53.729227289+03:00"
