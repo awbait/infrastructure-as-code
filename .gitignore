@@ -1,10 +1,2 @@
-# Follow example files only START
-#ansible/temp_vars/*/**
-#!ansible/temp_vars/*/*.example
-# ansible/credentials_vars/*/**
-#!ansible/credentials_vars/*/*.example
-#ansible/inventory/**
-#!ansible/inventory/*.example
-# Follow example files only END
-
-ansible
+ansible/group_vars/*/*
+!ansible/group_vars/*/*.yml.example
