@@ -2,7 +2,7 @@
 ansible/temp_vars/*/**
 !ansible/temp_vars/*/*.example
 
-ansible/credentials_vars/*/**
+# ansible/credentials_vars/*/**
 !ansible/credentials_vars/*/*.example
 
 ansible/inventory/**
