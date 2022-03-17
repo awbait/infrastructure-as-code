@@ -1,2 +1,7 @@
 ansible/group_vars/*/*
 !ansible/group_vars/*/*.yml.example
+
+ansible/inventory/*
+!ansible/inventory/*.yml.example
+
+hosts

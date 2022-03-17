@@ -1,0 +1,30 @@
+---
+- name: Hard-reboot VM
+  hosts: localhost
+  vars:
+    vm_name: testvm
+  vars_files:
+    - ../../group_vars/vsphere/credentials.yml
+
+  tasks:
+    - name: Set the state of a virtual machine to poweroff
+      vmware_guest_powerstate:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: false
+        folder: /BI/ATK/lessons/testcluster
+        name: "{{ vm_name }}"
+        state: powered-off
+      delegate_to: localhost
+
+    - name: Set the state of a virtual machine to poweron
+      vmware_guest_powerstate:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: false
+        folder: /BI/ATK/lessons/testcluster
+        name: "{{ vm_name }}"
+        state: powered-on
+      delegate_to: localhost
