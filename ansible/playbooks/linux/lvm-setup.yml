@@ -3,7 +3,7 @@
   hosts: all
   become: true
   vars_files:
-    - ../../temp_vars/linux/lvm-setup-vars.yml
+    - ../../group_vars/linux/lvm-setup.yml
 
   tasks:
     - name: Create new partition

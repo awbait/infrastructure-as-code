@@ -1,0 +1,27 @@
+- name: Install go
+  remote_user: root
+  hosts: all
+
+  tasks:
+    - name: Download and unarchive go
+      unarchive:
+        src: https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+        dest: /usr/local
+        remote_src: true
+    - name: Insert go path
+      blockinfile:
+        create: true
+        mode: 0644
+        dest: /etc/profile.d/go.sh
+        content: |
+          export PATH=$PATH:/usr/local/go/bin
+    - name: Insert lines in bash_profile
+      blockinfile:
+        create: true
+        mode: 0644
+        dest: ~/.bash_profile
+        content: |
+          export GOPATH=$HOME/project
+          export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+    - name: Update profiles
+      ansible.builtin.command: source /etc/profile.d/go.sh && source ~/.bash_profile

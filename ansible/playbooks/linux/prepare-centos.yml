@@ -6,7 +6,7 @@
     - name: Upgrade all packages
       yum:
         name: "*"
-        state: latest
+        state: stable
     - name: Install a list of packages with a list variable
       yum:
         name: "{{ packages }}"

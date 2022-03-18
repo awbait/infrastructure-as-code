@@ -4,4 +4,5 @@ ansible/group_vars/*/*
 ansible/inventory/*
 !ansible/inventory/*.yml.example
 
+ansible/playbooks/test
 hosts

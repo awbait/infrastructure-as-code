@@ -1,3 +1,4 @@
+---
 lvm_path: /opt/folder
 lvm_device: /dev/sdb
 lvm_vg_name: storage

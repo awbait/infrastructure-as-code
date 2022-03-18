@@ -1,0 +1,32 @@
+- name: LVM-ext4
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Create new partition
+      parted:
+        device: /dev/sdb
+        number: 1
+        state: present
+        # fs_type: ext4
+    - name: Create volume group
+      lvg:
+        vg: storage
+        pvs: /dev/sdb1
+    - name: Create logical volume
+      lvol:
+        vg: storage
+        lv: data
+        shrink: false
+        size: 100%FREE
+    - name: Create a ext4 filesystem
+      filesystem:
+        fstype: ext4
+        dev: /dev/storage/data
+    - name: Mount and bind a volume
+      mount:
+        path: /distr
+        src: /dev/storage/data
+        opts: rw
+        fstype: ext4
+        state: mounted
