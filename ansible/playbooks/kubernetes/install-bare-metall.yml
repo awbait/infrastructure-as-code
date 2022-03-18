@@ -16,12 +16,9 @@
           repo_gpgcheck=1
           gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
           exclude=kubelet kubeadm kubectl
-    - name: Disable SWAP
-      shell:
-        cmd: |
-          swapoff -a
-      args:
-        executable: /bin/bash
+    - name: Disable swap
+      command: swapoff -a
+      when: ansible_swaptotal_mb > 0
     - name: Remove Swap from fstab
       mount:
         name: swap
@@ -47,7 +44,7 @@
           - kubelet
           - kubeadm
           - kubectl
-        state: latest
+        state: stable
         disable_excludes: kubernetes
     - name: Start and enabled kubelet service
       service:
