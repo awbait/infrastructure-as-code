@@ -1,0 +1,66 @@
+- name: Install Oracle Exporter Prometeus Agent
+  hosts: all
+  remote_user: root
+
+  tasks:
+    - name: Create group "prometheus"
+      group:
+        name: prometheus
+        state: present
+    - name: Create user "prometheus"
+      user:
+        name: prometheus
+        groups: prometheus
+        shell: /sbin/nologin
+        append: true
+        state: present
+    - name: Create exporter directory
+      file:
+        path: /opt/oracle_exporter
+        state: directory
+        mode: 0644
+        owner: prometheus
+        group: prometheus
+    - name: Download and unarchive exporter
+      unarchive:
+        src: https://github.com/iamseth/oracledb_exporter/releases/download/0.3.0rc1/oracledb_exporter.0.3.0rc1-ora18.5.linux-amd64.tar.gz
+        dest: /opt/oracle_exporter
+        remote_src: true
+        extra_opts: [--strip-components=1]
+    - name: Create exporter directory for instant client
+      file:
+        path: /opt/oracle_exporter/instantclient-oracle
+        state: directory
+        mode: 0644
+        owner: prometheus
+        group: prometheus
+    - name: Download and unarchive exporter
+      unarchive:
+        src: https://download.oracle.com/otn_software/linux/instantclient/215000/instantclient-basic-linux.x64-21.5.0.0.0dbru.zip
+        dest: /opt/oracle_exporter/instantclient-oracle
+        remote_src: true
+        extra_opts: [-j]
+    - name: Create service file
+      copy:
+        dest: /etc/systemd/system/oracle_exporter.service
+        mode: 0644
+        content: |
+          [Unit]
+          Description=Prometheus Oracle Exporter
+          [Service]
+          User=prometheus
+          Group=prometheus
+          Environment="DATA_SOURCE_NAME=exporter/qYC1STZV#7ms@//localhost:1521/edu"
+          Environment="LD_LIBRARY_PATH=/opt/oracle_exporter/instantclient-oracle"
+          Environment="ORACLE_HOME=/u01/app/oracle/product/12.2.0/db_1"
+          ExecStart=/opt/oracle_exporter/oracledb_exporter \
+          --default.metrics "/opt/oracle_exporter/default-metrics.toml" \
+          --log.level error --web.listen-address 0.0.0.0:9101
+          [Install]
+          WantedBy=default.target
+    - name: Enable and start service
+      systemd:
+        name: oracle_exporter
+        daemon_reload: true
+        state: started
+        enabled: true

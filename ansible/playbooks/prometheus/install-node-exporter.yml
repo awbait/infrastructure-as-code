@@ -1,0 +1,47 @@
+- name: Install Node Exporter Prometeus Agent
+  hosts: all
+  remote_user: root
+
+  tasks:
+   - name: Create group "prometheus"
+     group:
+      name: prometheus
+      state: present
+   - name: Add user "prometheus" to remote server
+     user:
+      name: prometheus
+      groups: prometheus
+      shell: /sbin/nologin
+      append: true
+      state: present
+   - name: Create exporter directory
+     file:
+      path: /opt/node_exporter
+      state: directory
+      owner: prometheus
+      group: prometheus
+      mode: 0644
+   - name: Download and unarchive agent
+     unarchive:
+      src: https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+      dest: /opt/node_exporter
+      remote_src: true
+      extra_opts: [--strip-components=1]
+   - name: Create service file
+     copy:
+      dest: /etc/systemd/system/node_exporter.service
+      mode: 0644
+      content: |
+        [Unit]
+        Description=Node Exporter
+        [Service]
+        User=prometheus
+        ExecStart=/opt/node_exporter/node_exporter
+        [Install]
+        WantedBy=default.target
+   - name: Enable and start service
+     systemd:
+      name: node_exporter
+      daemon_reload: true
+      state: started
+      enabled: true
