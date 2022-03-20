@@ -62,4 +62,4 @@
         - name: "Practice"
           value: "{{ vm_attr_practice }}"
         - name: "Project code"
-          value: "{{ vm_attr_practice }}"
+          value: "{{ vm_attr_project_code }}"

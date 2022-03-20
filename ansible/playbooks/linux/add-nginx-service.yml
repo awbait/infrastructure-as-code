@@ -1,0 +1,20 @@
+- name: Add service to nginx
+  hosts: all
+  vars_files:
+  - ../../group_vars/linux/add-nginx-service.yml
+  become: true
+
+  tasks:
+    - name: Prepare and upload template file
+      ansible.builtin.template:
+        src: ../../templates/add-nginx-service.conf.j2
+        dest: /etc/nginx/conf.d/service_{{ subdomain_name }}.conf
+        owner: nginx
+        group: nginx
+        mode: 0644
+      notify: restart nginx
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
