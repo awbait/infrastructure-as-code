@@ -1,0 +1,16 @@
+apiVersion: v2
+name: deploy-postgresql
+description: Deploy postgresql
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+maintainers:
+  - name: awbait
+    email: hello@awbait.com
+    url: awbait.com
+
+dependencies:
+  - name: postgresql
+    version: "11.1.12"
+    repository: "https://charts.bitnami.com/bitnami"

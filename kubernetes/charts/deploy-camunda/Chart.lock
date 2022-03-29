@@ -1,0 +1,6 @@
+dependencies:
+- name: camunda-bpm-platform
+  repository: https://helm.camunda.cloud
+  version: 1.5.0
+digest: sha256:952a8c6a31be3a8e9765108c391ba6efe5dd0935efd8a78c0736e4625a9b872f
+generated: "2022-03-28T18:14:52.068535356+03:00"

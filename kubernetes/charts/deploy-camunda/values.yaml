@@ -1,0 +1,12 @@
+camunda-bpm-platform:
+  general:
+    debug: false
+
+  database:
+    driver: org.postgresql.Driver
+    url: jdbc:postgresql://postgresql.postgresql:5432/camunda
+    credentialsSecretName: camunda-bpm-platform-postgresql-credentials
+    # The username and password keys could be customized to whatever used in the credentials secret.
+    credentialsSecretKeys:
+      username: DB_USERNAME
+      password: DB_PASSWORD

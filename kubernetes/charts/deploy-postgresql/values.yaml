@@ -1,0 +1,9 @@
+postgresql:
+  global:
+    postgresql:
+      auth:
+        # Ваш пароль
+        postgresPassword: Passw0rd
+  # По умолчанию устанавливается 14 версия, если нужна 13я расскоментируйте строчки:
+  # image:
+  #   tag: 13.6.0-debian-10-r46
