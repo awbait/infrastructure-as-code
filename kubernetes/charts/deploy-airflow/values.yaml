@@ -1,0 +1,20 @@
+airflow:
+  ingress:
+    enabled: true
+    web:
+      annotations:
+        traefik.ingress.kubernetes.io/router.middlewares: airflow-airflow-stripprefix@kubernetescrd
+      pathType: Prefix
+      path: "/airflow"
+    flower:
+      annotations:
+        traefik.ingress.kubernetes.io/router.middlewares: airflow-flower-stripprefix@kubernetescrd
+      pathType: Prefix
+      path: "/flower"
+  postgresql:
+    enabled: false
+  data:
+    metadataSecretName: airflow-postgresql-credentials
+    resultBackendSecretName: airflow-postgresql-backend-credentials
+  webserverSecretKeySecretName: airflow-webserver-secret
+  webserverSecretKey: webserver-secret-key

@@ -1,0 +1,16 @@
+apiVersion: v2
+name: deploy-external-nginx-ingress
+description: Deploy External Ingres Nginx
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+maintainers:
+  - name: awbait
+    email: hello@awbait.com
+    url: awbait.com
+
+dependencies:
+  - name: airflow
+    version: "1.5.0"
+    repository: "https://airflow.apache.org"
